@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testNG.org/testNG-1.0.dtd">
+<suite name="Crossbrowser testing">
+  <test thread-count="5" name="chromeTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="testScript.LoginTest">
+      <methods>
+      <include name="verifyTheUserIsAbleToLoginWithValidCredentials"></include>  
+      <include name="verifyTheUserIsAbleToLoginWithInvalidUsernameValidPassword"></include> 
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="firefoxTest">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="testScript.LoginTest">
+      <methods>
+      <include name="verifyTheUserIsAbleToLoginWithValidCredentials"></include>  
+      <include name="verifyTheUserIsAbleToLoginWithInvalidUsernameValidPassword"></include> 
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="edgeTest">
+  <parameter name="browser" value="edge"></parameter>
+    <classes>
+      <class name="testScript.LoginTest">
+      <methods>
+      <include name="verifyTheUserIsAbleToLoginWithValidCredentials"></include>  
+      <include name="verifyTheUserIsAbleToLoginWithInvalidUsernameValidPassword"></include> 
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
